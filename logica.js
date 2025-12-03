@@ -1,4 +1,3 @@
-// Seleccionamos elementos del DOM
 const formulario = document.querySelector('.form');
 const inputCedula = document.getElementById('cedula');
 const mensaje = document.querySelector('.mensaje');
@@ -44,3 +43,4 @@ formulario.addEventListener('submit', async function (evento) {
     mensaje.style.color = "red";
   }
 });
+
