@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Validador de Cédula - Servicio Web</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main>
+    <section class="ventana">
+      <header>
+        <h1 id="titulo">Servicio Web - Módulo 10 (Cédula)</h1>
+      </header>
+
+      <form class="form" novalidate>
+        <label for="cedula">Cédula (con o sin guiones)</label>
+        <input id="cedula" type="text" required>
+
+        <button type="submit">Validar (vía Servicio Web)</button>
+
+        <p class="mensaje">Introduzca cédula y presione Validar.</p>
+        <hr>
+
+        <p><strong>Cédulas de ejemplo:</strong></p>
+
+        <pre>
+00113918239 (correcta)
+03102736452 (incorrecta)
+402-1335867-0 (correcta)
+        </pre>
+
+        <p>
+          Puede copiar una de estas cédulas y pegarla arriba para probar el validador.
+        </p>
+      </form>
+    </section>
+  </main>
+  <script src="logica.js"></script>
+</body>
+</html>
