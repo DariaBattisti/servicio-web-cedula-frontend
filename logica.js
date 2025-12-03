@@ -17,7 +17,7 @@ formulario.addEventListener('submit', async function (evento) {
   }
 
   mensaje.textContent = "Consultando servicio web...";
-  mensaje.style.color = "rgb(82, 93, 148)";
+  mensaje.style.color = "rgba(91, 102, 157, 1)";
 
   try {
     const respuesta = await fetch(URL_SERVICIO, {
@@ -31,10 +31,10 @@ formulario.addEventListener('submit', async function (evento) {
     const data = await respuesta.json();
 
     if (data.valida) {
-      mensaje.textContent = data.mensaje + " (" + data.cedula + ")";
+      mensaje.textContent = data.mensaje;
       mensaje.style.color = "green";
     } else {
-      mensaje.textContent = data.mensaje + (data.cedula ? " (" + data.cedula + ")" : "");
+      mensaje.textContent = data.mensaje;
       mensaje.style.color = "red";
     }
   } catch (error) {
@@ -43,4 +43,5 @@ formulario.addEventListener('submit', async function (evento) {
     mensaje.style.color = "red";
   }
 });
+
 
